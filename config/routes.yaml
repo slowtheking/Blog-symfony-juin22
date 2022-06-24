@@ -1,3 +1,15 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+# tjs alligner verticalement path et controller comme suit
+app_home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+# si route dans yaml avec id pour annoncer id comme décimale -> ex:
+#article_ajout: 
+#    path: /article_{id}
+#    controller: App\Controller\articleController::unarticle
+#    requirement:
+#        id: '\id+'   
+

@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+{{ parent() }} - Accueil
+{% endblock %}
+
+{% block content %}
+<div class="row mt-5 justify-content-center texte-center">
+    <h1>Dernier article publié</h1>
+    <div>
+            {# "dernierArticle" représente "$dernierArticle" dans la fonction index de HomeController #}
+        <h3>Titre de l'article: {{ dernierArticle.titre }}</h3>
+        <h6>Date de création: {{ dernierArticle.dateDeCreation | date("d/m/Y \à H\\hi") }}</h6>
+        {# pour afficher QUE SI dateDeModification existe #}
+        {% if dernierArticle.dateDeModification is not null %}
+        <h6>Date de modification: {{ dernierArticle.dateDeModification | date("d/m/Y \à H\\hi") }}</h6>
+        {% endif %}
+
+        <h6>Auteur: {{ dernierArticle.id }}</h6>
+        <p>Contenu de l'article: <br> {{ dernierArticle.contenu | slice(0, 150) }} <br>
+            <a href="">Lire la suite</a>
+        </p>
+    </div>
+</div>
+{% endblock content %}

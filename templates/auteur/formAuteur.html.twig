@@ -1,0 +1,13 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+	- Formulaire auteurs
+{% endblock %}
+
+{% block content %}
+	<h2>Ajout d'un auteur</h2>
+
+	{{form(formAuteur)}}
+	
+{% endblock %}

@@ -7,4 +7,10 @@
 /public/bundles/
 /var/
 /vendor/
+templates/panier.html.twig
+templates/test.html.twig
+git adtemplate/autre
+/src/controller/PanierControler.php
+/src/controller/TestControler.php
+templates/autre
 ###< symfony/framework-bundle ###

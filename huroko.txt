@@ -1,0 +1,21 @@
+copier le code d'install sur le site heroku
+
+c1boiteamail@gmail.com
+
+https://immense-forest-30710.herokuapp.com/ 
+ok | https://git.heroku.com/immense-forest-30710.git
+créer un fichier a la racine -> Proctile 
+et dedans-> web: heroku-php-apache2 public/
+
+heroku config:set APP_ENV=prod
+
+
+dans composer.json a la fin des scripts
+,
+        "compil":[
+            "php bin/console doctrine:migration:migrate"
+        ]
+
+
+dans le terminal
+composer require symfony/apache-pack
